@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aether Group • AetherIntel™ • MARLO</title>
+<meta name="description" content="Aether Group — practical technological resources for a changing world. AetherIntel™ subscriptions. MARLO (Machine‑Assisted Reasoning & Learning Operator).">
+<!-- Fonts: Mokoto & Cosmic Octo via CDN, with Audiowide/Orbitron fallbacks -->
+<link href="https://fonts.cdnfonts.com/css/mokoto" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/cosmic-octo" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Audiowide&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050505;
+  --text:#eae4ff;
+  --muted:#bfb7e6;
+  --neon:#b26bff;      /* neon purple (bright) */
+  --neon-2:#904bff;    /* deeper purple */
+  --box: rgba(178,107,255,.12);
+  --glow: 0 0 60px rgba(178,107,255,.45), 0 0 22px rgba(178,107,255,.35);
+  --ring: 1px solid rgba(255,255,255,.12);
+}
+*{box-sizing:border-box}
+html,body{height:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial}
+a{color:inherit;text-decoration:none}
+/* NAV */
+.nav{position:sticky;top:0;z-index:1000;background:linear-gradient(180deg,rgba(0,0,0,.8),rgba(0,0,0,.55));backdrop-filter:saturate(140%) blur(10px);border-bottom:var(--ring)}
+.nav .inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.06em}
+.brand .ag{font-family:'Mokoto', 'Audiowide', 'Orbitron', sans-serif;font-size:24px;color:var(--neon);text-shadow:var(--glow)}
+.nav a.btn{padding:10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.12)}
+.nav a.btn:hover{background:var(--box)}
+/* LAYOUT */
+.section{min-height:100dvh;display:grid;place-items:center;padding:80px 20px}
+.container{max-width:1200px;margin:auto}
+.stack{display:flex;flex-direction:column;gap:22px}
+h1,h2,h3{margin:0}
+h1.big{font-size:clamp(48px,8vw,120px);line-height:1.02;letter-spacing:-.02em}
+h2{font-size:clamp(28px,4vw,54px)}
+p.lead{font-size:clamp(18px,2.2vw,24px);color:var(--muted);max-width:80ch}
+/* TYPO accents */
+.ag-word{font-family:'Mokoto','Audiowide','Orbitron',sans-serif;color:var(--text)}
+.marlo-word{font-family:'Cosmic Octo','Orbitron','Audiowide',sans-serif;color:var(--text)}
+/* Neon UI */
+.box{background:var(--box);border:1px solid rgba(178,107,255,.35);border-radius:24px;padding:22px;box-shadow:var(--glow)}
+.grid{display:grid;gap:18px}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(178,107,255,.4);padding:8px 12px;border-radius:999px;background:rgba(178,107,255,.08);color:#efe7ff}
+.tags{display:flex;gap:10px;flex-wrap:wrap}
+/* CTA */
+.cta{display:inline-block;background:var(--neon);color:#08020f;font-weight:800;border-radius:16px;padding:16px 22px;letter-spacing:.02em;border:1px solid rgba(255,255,255,.18);box-shadow:var(--glow);transform:translateY(0);transition:transform .2s ease, box-shadow .2s ease}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(178,107,255,.45)}
+.cta.ghost{background:transparent;color:var(--text);border:1px solid rgba(178,107,255,.45)}
+/* Pricing */
+.tier{padding:22px;border-radius:20px;background:linear-gradient(180deg,rgba(178,107,255,.12),rgba(178,107,255,.05));border:1px solid rgba(178,107,255,.4)}
+.price{font-size:32px;font-weight:900;color:var(--text)}
+ul.clean{margin:0;padding-left:18px}
+ul.clean li{margin:8px 0}
+/* Footer */
+.footer{border-top:var(--ring);padding:22px;text-align:center;color:var(--muted)}
+/* Small screens */
+@media (max-width:980px){
+  .grid.cols-3{grid-template-columns:1fr}
+  .grid.cols-2{grid-template-columns:1fr}
+}
+/* Fancy underline links */
+.u{position:relative}
+.u:after{content:"";position:absolute;left:0;bottom:-3px;height:2px;width:100%;background:linear-gradient(90deg,var(--neon),transparent);box-shadow:var(--glow)}
+/* Bottom sticky contact */
+.bottom-contact{position:sticky;bottom:18px;display:flex;justify-content:center;pointer-events:none}
+.bottom-contact .cta{pointer-events:auto}
+</style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="inner">
+      <div class="brand"><span class="ag">AG</span><span>Aether Group</span></div>
+      <div style="display:flex;gap:8px">
+        <a class="btn" href="#aether">About</a>
+        <a class="btn" href="#intel">AetherIntel™</a>
+        <a class="btn" href="#marlo">MARLO</a>
+        <a class="btn" href="#docs">Docs</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- AETHER GROUP (About) -->
+  <section id="aether" class="section">
+    <div class="container stack">
+      <h1 class="big">
+        <span class="ag-word">Aether Group</span><br>
+        <span style="color:var(--neon)">practical tech</span> for a changing world.
+      </h1>
+      <p class="lead">
+        We’re a multifaceted company building and packaging <span class="u">practical technological resources and advancements</span>—tools that make teams faster, smarter, and more effective today.
+      </p>
+      <div class="grid cols-3">
+        <div class="box">
+          <h3>What we do</h3>
+          <p>Design, ship, and support lean products that remove drag: intelligence, automation, operator‑grade interfaces.</p>
+          <div class="tags">
+            <span class="tag">Operator UX</span><span class="tag">Decision support</span><span class="tag">On‑device AI</span>
+          </div>
+        </div>
+        <div class="box">
+          <h3>How we work</h3>
+          <p>Short loops. Clear constraints. Speed first. We integrate with your stack or stand up greenfield pilots in days.</p>
+          <div class="tags">
+            <span class="tag">Rapid pilots</span><span class="tag">Secure</span><span class="tag">Transparent pricing</span>
+          </div>
+        </div>
+        <div class="box">
+          <h3>Products</h3>
+          <p><b>AetherIntel™</b> for foresight & briefings. <b class="marlo-word">MARLO</b> as your Machine‑Assisted Reasoning & Learning Operator.</p>
+          <div class="tags">
+            <span class="tag">Intel</span><span class="tag">Automation</span><span class="tag">Voice</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-contact"><a class="cta" href="#contact">Contact</a></div>
+  </section>
+
+  <!-- AETHERINTEL -->
+  <section id="intel" class="section">
+    <div class="container stack">
+      <h2 class="big"><span class="ag-word">AetherIntel</span><sup>™</sup></h2>
+      <p class="lead">Signal over noise. Actionable summaries and deep dives precisely when you need them.</p>
+      <div class="grid cols-3">
+        <div class="tier">
+          <h3>Basic</h3>
+          <div class="price">$49<span style="font-size:16px">/mo per seat</span></div>
+          <ul class="clean">
+            <li>Weekly Future Brief (5–7 min read)</li>
+            <li>Key signals & scenarios</li>
+            <li>Charts & quick actions</li>
+          </ul>
+          <p><a class="cta ghost" href="mailto:pricing@aether-group.com?subject=AetherIntel%20Basic%20Inquiry">Talk to sales</a></p>
+        </div>
+        <div class="tier" style="border-color:rgba(178,107,255,.9);box-shadow:var(--glow)">
+          <h3>Professional</h3>
+          <div class="price">$99<span style="font-size:16px">/mo per seat</span></div>
+          <ul class="clean">
+            <li>Everything in Basic</li>
+            <li>Priority email support</li>
+            <li>On‑demand briefings</li>
+            <li>Weekly/monthly/quarterly options</li>
+          </ul>
+          <p><a class="cta" href="mailto:pricing@aether-group.com?subject=AetherIntel%20Professional%20Inquiry">Start a pilot</a></p>
+        </div>
+        <div class="tier">
+          <h3>Enterprise</h3>
+          <div class="price">Custom</div>
+          <ul class="clean">
+            <li>Personalized advisory</li>
+            <li>Deep‑dive reports (15–30 pages)</li>
+            <li>Market maps & vendor lists</li>
+            <li>Private briefings for leadership</li>
+          </ul>
+          <p><a class="cta ghost" href="mailto:pricing@aether-group.com?subject=AetherIntel%20Enterprise%20Inquiry">Contact sales</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-contact"><a class="cta" href="#contact">Contact</a></div>
+  </section>
+
+  <!-- MARLO -->
+  <section id="marlo" class="section">
+    <div class="container stack">
+      <h2 class="big"><span class="marlo-word">M.A.R.L.O.</span></h2>
+      <p class="lead"><b>Machine‑Assisted Reasoning & Learning Operator.</b> A voice‑first, embedded operator that answers fast, stays inside your word cap, and returns images inline.</p>
+      <div class="grid cols-3">
+        <div class="box">
+          <h3>Voice Engine</h3>
+          <p>Jarvis‑like voice—speaks on boot once, then only when asked. Push‑to‑talk supported.</p>
+        </div>
+        <div class="box">
+          <h3>Embedded UI</h3>
+          <p>Panel lives inside your app window. Shows your input, hides assistant text box. No browser pop‑outs.</p>
+        </div>
+        <div class="box">
+          <h3>Image Generation</h3>
+          <p>“Generate X” → MARLO delivers images inline with export options. Snappy streaming for responsiveness.</p>
+        </div>
+        <div class="box">
+          <h3>Word Cap</h3>
+          <p>Hard per‑message limit for surgical, on‑task responses.</p>
+        </div>
+        <div class="box">
+          <h3>Latency‑First</h3>
+          <p>Lightweight stack and caching for sub‑second perceived response.</p>
+        </div>
+        <div class="box">
+          <h3>Theming</h3>
+          <p>Black primary, neon purple secondary. Subtle glow, soft corners, and motion that feels like money.</p>
+        </div>
+      </div>
+      <p><a class="cta" href="mailto:pricing@aether-group.com?subject=MARLO%20Sales">Contact Sales</a></p>
+    </div>
+    <div class="bottom-contact"><a class="cta" href="#contact">Contact</a></div>
+  </section>
+
+  <!-- DOCS (stub) -->
+  <section id="docs" class="section">
+    <div class="container stack">
+      <h2 class="big">Docs</h2>
+      <div class="grid cols-2">
+        <div class="box">
+          <h3>Getting Started</h3>
+          <ul class="clean">
+            <li>Intel: pick a tier → email <a class="u" href="mailto:pricing@aether-group.com">pricing@aether-group.com</a> for seat setup.</li>
+            <li>MARLO: choose voice + word cap → embed the HTML panel component.</li>
+            <li>Security: SSO/SAML available on Enterprise.</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Support</h3>
+          <ul class="clean">
+            <li>Email <a class="u" href="mailto:pricing@aether-group.com">pricing@aether-group.com</a></li>
+            <li>Response targets: same‑day (Basic), 4h (Pro), 1h (Enterprise).</li>
+          </ul>
+        </div>
+      </div>
+      <p class="lead">Need full docs or API references? Ask sales for access—we’ll open the portal for your team.</p>
+    </div>
+    <div class="bottom-contact"><a class="cta" href="#contact">Contact</a></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container stack">
+      <h2 class="big">Talk to Sales</h2>
+      <div class="grid cols-2">
+        <div class="box">
+          <p>Tell us about your use case and timeline. We’ll reply fast.</p>
+          <form id="contactForm" class="stack" style="gap:12px">
+            <input required name="name" placeholder="Your name" style="padding:16px;border-radius:14px;background:#0b0b10;border:1px solid rgba(255,255,255,.14);color:#fff">
+            <input required name="company" placeholder="Company" style="padding:16px;border-radius:14px;background:#0b0b10;border:1px solid rgba(255,255,255,.14);color:#fff">
+            <textarea required name="message" rows="6" placeholder="What do you want from AetherIntel™ or MARLO?" style="padding:16px;border-radius:14px;background:#0b0b10;border:1px solid rgba(255,255,255,.14);color:#fff"></textarea>
+            <button class="cta" type="submit">Open Email Draft</button>
+          </form>
+          <p class="lead">Or email directly: <a class="u" href="mailto:pricing@aether-group.com">pricing@aether-group.com</a></p>
+        </div>
+        <div class="box">
+          <h3>What to include</h3>
+          <ul class="clean">
+            <li>Team size & timeline</li>
+            <li>Use cases & constraints</li>
+            <li>Desired pilot scope</li>
+            <li>Security needs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">© Aether Group — AetherIntel™ — MARLO</div>
+
+  <!-- Minimal JS -->
+  <script>
+    // Contact form opens mailto with prefilled content
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = new FormData(this);
+      const subject = encodeURIComponent('Sales Inquiry — Aether Group');
+      const body = encodeURIComponent(
+        'Name: ' + data.get('name') + '\\n' +
+        'Company: ' + data.get('company') + '\\n\\n' +
+        'Message:\\n' + data.get('message')
+      );
+      window.location.href = 'mailto:pricing@aether-group.com?subject=' + subject + '&body=' + body;
+    });
+  </script>
+
+  <!-- Analytics placeholders (uncomment and add your IDs) -->
+  <!-- Plausible.io -->
+  <!-- <script defer data-domain="your-domain.com" src="https://plausible.io/js/script.js"></script> -->
+  <!-- Google Analytics 4 -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+</body>
+</html>
